@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagnik Biswas | AI Specialist</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="splash-screen">
+        <div class="splash-content">
+            <div class="splash-logo">
+                <span class="logo-s">S</span>
+                <div class="logo-ring"></div>
+                <span class="logo-b">B</span>
+            </div>
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+            <p class="splash-text">Initializing Neural Interface</p>
+        </div>
+    </div>
+
+    <!-- Animated Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Progress Bar (Scroll) -->
+    <div id="scroll-progress" class="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar glass">
+        <div class="nav-container">
+            <div class="nav-logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                SB<span class="logo-accent">.AI</span>
+            </div>
+            
+            <div class="nav-links desktop-only">
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#skills">Skills</a>
+                <a href="#languages">Languages</a>
+                <a href="#education">Education</a>
+                <a href="mailto:sagnikb000@gmail.com" class="btn-contact">Contact</a>
+            </div>
+
+            <button id="mobile-menu-toggle" class="mobile-only">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu hidden">
+        <button id="mobile-menu-close">
+            <i data-lucide="x"></i>
+        </button>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#skills">Skills</a>
+        <a href="#languages">Languages</a>
+        <a href="#education">Education</a>
+    </div>
+
+    <main class="content-wrapper">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="reveal">
+                <div class="badge">
+                    <span class="status-dot">
+                        <span class="dot-ping"></span>
+                        <span class="dot-inner"></span>
+                    </span>
+                    Microsoft Certified AI Professional
+                </div>
+                
+                <h1 class="hero-title">
+                    Sagnik <br>
+                    <span class="text-blue text-glow">Biswas</span>
+                </h1>
+
+                <p class="hero-subtitle-small">AI Engineer | Deep Learning & Machine Learning Developer</p>
+                
+                <p class="hero-subtitle">
+                    I build and deploy deep learning models and intelligent systems for real-world applications. Developed CNN-based plant disease detection systems trained on 30,000+ images achieving 95% accuracy.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#experience" class="btn-primary">
+                        View Experience
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Impact Strip / Achievements -->
+            <div id="impact-stats" class="impact-strip reveal delay-1">
+                <div class="impact-card glass">
+                    <div class="impact-title">95% Accuracy</div>
+                    <div class="impact-label">Model Accuracy</div>
+                    <p class="impact-desc">Achieved in deployed deep learning models.</p>
+                </div>
+                <div class="impact-card glass">
+                    <div class="impact-title">30,000+ Images</div>
+                    <div class="impact-label">Image Dataset</div>
+                    <p class="impact-desc">Trained CNN on massive plant disease dataset.</p>
+                </div>
+                <div class="impact-card glass">
+                    <div class="impact-title">Microsoft AI-900</div>
+                    <div class="impact-label">Certified</div>
+                    <p class="impact-desc">Certified professional in Azure AI Fundamentals.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section reveal">
+            <div class="section-header">
+                <h2 class="section-title">Experience</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="experience-list">
+                <!-- SEO Engineer -->
+                <div class="exp-item glass">
+                    <button class="exp-toggle" data-index="seo">
+                        <div class="exp-header-left">
+                            <h3 class="exp-role">SEO Engineer</h3>
+                            <p class="exp-company">MeraBhai Digital Marketing Agency (Dresserrt Innovation LLP)</p>
+                        </div>
+                        <div class="exp-header-right">
+                            <span class="exp-dates">Technical SEO</span>
+                            <span class="exp-location">Delhi NCR, India</span>
+                        </div>
+                    </button>
+                    <div class="exp-content active" id="exp-content-seo">
+                        <div class="divider"></div>
+                        <p class="project-desc">Worked on technical SEO optimization and content strategy for digital marketing projects and client websites.</p>
+                        <ul class="exp-bullets">
+                            <li>Implemented on-page SEO improvements for multiple websites</li>
+                            <li>Created SEO-focused technical articles and content</li>
+                            <li>Conducted keyword research and search optimization</li>
+                            <li>Improved website performance and search visibility</li>
+                            <li>Collaborated with developers to improve UX and site structure</li>
+                        </ul>
+                        <div class="exp-metrics">
+                            <span class="metric-tag">Technical SEO</span>
+                            <span class="metric-tag">Keyword Research</span>
+                            <span class="metric-tag">On-Page SEO</span>
+                            <span class="metric-tag">Performance Optimization</span>
+                            <span class="metric-tag">Content Strategy</span>
+                        </div>
+                        <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+                            <a href="https://merabhai.com/author/sagnikbiswas/" target="_blank" class="btn-github">
+                                <i data-lucide="external-link"></i>
+                                View Articles
+                            </a>
+                            <a href="https://www.google.com/search?mstk=AUtExfA_JRAH5gRgLNvodK7XwKuS--tF5M09DqtAxT5nAFYuLagaoTWQDZynlTWfP0uUS-vFZIuBBy44nWxfuaTjmA2AKzEglGd3wPWbhIaVOfS4F4nEt8t4hAlDexRE4yXiJfr-q8NNz6gdjDuvSRvGHxfLVs7oQKCTxdk&udm=50&csuir=1&aep=28&q=sagnik+biswas+seo&oq=sagnik+biswas+s&gs_lcrp=EgZjaHJvbWUqDAgBECMYJxjwBRieBjIGCAAQRRg5MgwIARAjGCcY8AUYngYyCAgCEAAYFhgeMgoIAxAAGIAEGKIEMgcIBBAAGO8FMgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEJMTA3NDFqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8" target="_blank" class="btn-secondary btn-sm" style="text-decoration: none;">
+                                <i data-lucide="search" style="width: 14px; height: 14px;"></i>
+                                Google Search Proof
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dresset -->
+                <div class="exp-item glass">
+                    <button class="exp-toggle" data-index="0">
+                        <div class="exp-header-left">
+                            <h3 class="exp-role">UI/UX Designer Intern</h3>
+                            <p class="exp-company">Dresserrt Innovation LLP</p>
+                        </div>
+                        <div class="exp-header-right">
+                            <span class="exp-dates">April 2025 - October 2025</span>
+                            <span class="exp-location">Faridabad, Haryana, India</span>
+                        </div>
+                    </button>
+                    <div class="exp-content" id="exp-content-0">
+                        <div class="divider"></div>
+                        <ul class="exp-bullets">
+                            <li>Designed technical UI/UX architectures for MVP applications</li>
+                            <li>Ensured design-to-code consistency across development cycles</li>
+                            <li>Optimized user flows through data-driven design iterations</li>
+                            <li>Collaborated with engineering teams on front-end integration</li>
+                            <li>Optimized features for high-performance user experiences</li>
+                        </ul>
+                        <div class="exp-metrics">
+                            <span class="metric-tag">95% Design Consistency</span>
+                            <span class="metric-tag">MVP App Launch</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Edunet -->
+                <div class="exp-item glass">
+                    <button class="exp-toggle" data-index="1">
+                        <div class="exp-header-left">
+                            <h3 class="exp-role">AI Intern</h3>
+                            <p class="exp-company">Edunet Foundation</p>
+                        </div>
+                        <div class="exp-header-right">
+                            <span class="exp-dates">February 2025 - March 2025</span>
+                            <span class="exp-location">Remote</span>
+                        </div>
+                    </button>
+                    <div class="exp-content" id="exp-content-1">
+                        <div class="divider"></div>
+                        <ul class="exp-bullets">
+                            <li>Implemented AI/ML models focusing on practical deployment</li>
+                            <li>Architected cloud-based AI workflows on Azure</li>
+                            <li>Developed automated pipelines for model evaluation</li>
+                        </ul>
+                        <div class="exp-metrics">
+                            <span class="metric-tag">Cloud AI Workflows</span>
+                            <span class="metric-tag">Azure AI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CodSoft -->
+                <div class="exp-item glass">
+                    <button class="exp-toggle" data-index="2">
+                        <div class="exp-header-left">
+                            <h3 class="exp-role">AI Intern</h3>
+                            <p class="exp-company">CodSoft</p>
+                        </div>
+                        <div class="exp-header-right">
+                            <span class="exp-dates">June 2024 - July 2024</span>
+                            <span class="exp-location">Remote</span>
+                        </div>
+                    </button>
+                    <div class="exp-content" id="exp-content-2">
+                        <div class="divider"></div>
+                        <ul class="exp-bullets">
+                            <li>Developed deep learning architectures for predictive analysis</li>
+                            <li>Implemented CNN and RNN models for practical AI applications</li>
+                            <li>Optimized hyperparameters for improved model performance</li>
+                        </ul>
+                        <div class="exp-metrics">
+                            <span class="metric-tag">Model Prototyping</span>
+                            <span class="metric-tag">Deep Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section reveal">
+            <div class="section-header">
+                <h2 class="section-title">Projects</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="experience-list">
+                <!-- Project 1 -->
+                <div class="exp-item glass">
+                    <button class="exp-toggle" data-index="p1">
+                        <div class="exp-header-left">
+                            <h3 class="exp-role">Automated Plant Leaf Disease Detection</h3>
+                            <p class="exp-company">AI & Computer Vision</p>
+                        </div>
+                        <div class="exp-header-right">
+                            <span class="exp-dates">Deep Learning</span>
+                        </div>
+                    </button>
+                    <div class="exp-content active" id="exp-content-p1">
+                        <div class="divider"></div>
+                        <div class="project-details">
+                            <p class="project-desc">Built a CNN-based deep learning system to detect plant diseases from leaf images.</p>
+                            <div class="project-meta">
+                                <strong>Problem:</strong> Farmers struggle to identify plant diseases early.
+                            </div>
+                            <div class="project-meta">
+                                <strong>Dataset:</strong> 30,000+ plant leaf images
+                            </div>
+                            <div class="project-meta">
+                                <strong>Results:</strong> 95% model accuracy
+                            </div>
+                            <div class="project-stack">
+                                <span class="metric-tag">Python</span>
+                                <span class="metric-tag">TensorFlow</span>
+                                <span class="metric-tag">CNN</span>
+                                <span class="metric-tag">Deep Learning</span>
+                                <span class="metric-tag">Computer Vision</span>
+                            </div>
+                            <a href="https://github.com/sagnik-dev/plant-disease-detection-cnn-gradcam-shap" target="_blank" class="btn-github">
+                                <i data-lucide="github"></i>
+                                GitHub Repository
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="exp-item glass">
+                    <button class="exp-toggle" data-index="p2">
+                        <div class="exp-header-left">
+                            <h3 class="exp-role">AI-Powered Fake News Detection</h3>
+                            <p class="exp-company">Machine Learning & NLP</p>
+                        </div>
+                        <div class="exp-header-right">
+                            <span class="exp-dates">NLP</span>
+                        </div>
+                    </button>
+                    <div class="exp-content" id="exp-content-p2">
+                        <div class="divider"></div>
+                        <div class="project-details">
+                            <p class="project-desc">Machine learning system that detects fake news articles using NLP techniques.</p>
+                            <ul class="exp-bullets">
+                                <li>Text classification</li>
+                                <li>Natural Language Processing</li>
+                                <li>Credibility detection</li>
+                            </ul>
+                            <div class="project-stack">
+                                <span class="metric-tag">Python</span>
+                                <span class="metric-tag">Machine Learning</span>
+                                <span class="metric-tag">NLP</span>
+                            </div>
+                            <a href="https://github.com/sagnik-dev/AI-Power-Fake-News-Detection-System" target="_blank" class="btn-github">
+                                <i data-lucide="github"></i>
+                                GitHub Repository
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="exp-item glass">
+                    <button class="exp-toggle" data-index="p3">
+                        <div class="exp-header-left">
+                            <h3 class="exp-role">CodeLens AI</h3>
+                            <p class="exp-company">AI Tooling</p>
+                        </div>
+                        <div class="exp-header-right">
+                            <span class="exp-dates">LLM</span>
+                        </div>
+                    </button>
+                    <div class="exp-content" id="exp-content-p3">
+                        <div class="divider"></div>
+                        <div class="project-details">
+                            <p class="project-desc">AI-powered tool designed to analyze and explain source code to assist developers.</p>
+                            <ul class="exp-bullets">
+                                <li>Code understanding</li>
+                                <li>AI-powered analysis</li>
+                                <li>Developer productivity</li>
+                            </ul>
+                            <div class="project-stack">
+                                <span class="metric-tag">Python</span>
+                                <span class="metric-tag">AI</span>
+                                <span class="metric-tag">LLM Integration</span>
+                            </div>
+                            <a href="https://github.com/sagnik-dev/-AI-For-Bharat-codelens-ai-" target="_blank" class="btn-github">
+                                <i data-lucide="github"></i>
+                                GitHub Repository
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="exp-item glass">
+                    <button class="exp-toggle" data-index="p4">
+                        <div class="exp-header-left">
+                            <h3 class="exp-role">Blood Bank Management System</h3>
+                            <p class="exp-company">Web Platform</p>
+                        </div>
+                        <div class="exp-header-right">
+                            <span class="exp-dates">Web Dev</span>
+                        </div>
+                    </button>
+                    <div class="exp-content" id="exp-content-p4">
+                        <div class="divider"></div>
+                        <div class="project-details">
+                            <p class="project-desc">Web platform for managing blood donors, blood availability, and emergency blood requests.</p>
+                            <div class="project-stack">
+                                <span class="metric-tag">HTML</span>
+                                <span class="metric-tag">CSS</span>
+                                <span class="metric-tag">JavaScript</span>
+                            </div>
+                            <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+                                <a href="https://github.com/sagnik-dev/bloodbank-management-system" target="_blank" class="btn-github">
+                                    <i data-lucide="github"></i>
+                                    GitHub Repository
+                                </a>
+                                <a href="https://sagnik-dev.github.io/bloodbank-management-system/" target="_blank" class="btn-secondary btn-sm" style="text-decoration: none;">
+                                    <i data-lucide="external-link" style="width: 14px; height: 14px;"></i>
+                                    Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="exp-item glass">
+                    <button class="exp-toggle" data-index="p5">
+                        <div class="exp-header-left">
+                            <h3 class="exp-role">Recipe Recommendation System</h3>
+                            <p class="exp-company">Web Application</p>
+                        </div>
+                        <div class="exp-header-right">
+                            <span class="exp-dates">Firebase</span>
+                        </div>
+                    </button>
+                    <div class="exp-content" id="exp-content-p5">
+                        <div class="divider"></div>
+                        <div class="project-details">
+                            <p class="project-desc">System that recommends dishes based on ingredients available in the user's kitchen.</p>
+                            <div class="project-stack">
+                                <span class="metric-tag">JavaScript</span>
+                                <span class="metric-tag">Firebase</span>
+                            </div>
+                            <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+                                <a href="https://github.com/sagnik-dev/Recipe-Recommendation-System" target="_blank" class="btn-github">
+                                    <i data-lucide="github"></i>
+                                    GitHub Repository
+                                </a>
+                                <a href="https://sagnik-dev.github.io/Recipe-Recommendation-System/" target="_blank" class="btn-secondary btn-sm" style="text-decoration: none;">
+                                    <i data-lucide="external-link" style="width: 14px; height: 14px;"></i>
+                                    Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section reveal">
+            <div class="section-header">
+                <h2 class="section-title">Expertise</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card glass">
+                    <div class="skill-icon"><i data-lucide="cpu"></i></div>
+                    <h3 class="skill-category">AI & Machine Learning</h3>
+                    <p class="skill-items">TensorFlow • CNN • EfficientNet • Deep Learning • Computer Vision</p>
+                </div>
+                <div class="skill-card glass">
+                    <div class="skill-icon"><i data-lucide="code"></i></div>
+                    <h3 class="skill-category">Development</h3>
+                    <p class="skill-items">Python • JavaScript • Web Development • API Integration</p>
+                </div>
+                <div class="skill-card glass">
+                    <div class="skill-icon"><i data-lucide="shield"></i></div>
+                    <h3 class="skill-category">Cloud & Security</h3>
+                    <p class="skill-items">Microsoft Azure AI-900 • IT Security Foundations</p>
+                </div>
+                <div class="skill-card glass">
+                    <div class="skill-icon"><i data-lucide="layout"></i></div>
+                    <h3 class="skill-category">Design & Core</h3>
+                    <p class="skill-items">UI/UX Design • Object-Oriented Programming • Networking</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Languages Section -->
+        <section id="languages" class="section reveal">
+            <div class="section-header">
+                <h2 class="section-title">Languages</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card glass">
+                    <div class="skill-icon"><i data-lucide="languages"></i></div>
+                    <h3 class="skill-category">English</h3>
+                    <p class="skill-items">Professional</p>
+                </div>
+                <div class="skill-card glass">
+                    <div class="skill-icon"><i data-lucide="languages"></i></div>
+                    <h3 class="skill-category">Hindi</h3>
+                    <p class="skill-items">Fluent</p>
+                </div>
+                <div class="skill-card glass">
+                    <div class="skill-icon"><i data-lucide="languages"></i></div>
+                    <h3 class="skill-category">Bengali</h3>
+                    <p class="skill-items">Native</p>
+                </div>
+                <div class="skill-card glass">
+                    <div class="skill-icon"><i data-lucide="languages"></i></div>
+                    <h3 class="skill-category">German</h3>
+                    <p class="skill-items">Conversational</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Certs -->
+        <section id="education" class="section reveal">
+            <div class="edu-grid">
+                <div class="edu-col">
+                    <div class="section-header">
+                        <h2 class="section-title">Education</h2>
+                        <div class="section-line"></div>
+                    </div>
+                    <div class="edu-item">
+                        <div class="edu-dot"></div>
+                        <h3 class="edu-inst">Manav Rachna International Institute of Research & Studies</h3>
+                        <p class="edu-degree">Bachelor of Technology - BTech</p>
+                        <p class="edu-field">Computer science engineering specialisation in artificial intelligent and machine learning</p>
+                        <p class="edu-dates">June 2023 - May 2027</p>
+                    </div>
+                    <div class="edu-item" style="margin-top: 2rem;">
+                        <div class="edu-dot"></div>
+                        <h3 class="edu-inst">Aakash Institute</h3>
+                        <p class="edu-degree">Higher Secondary (Class 11–12) – PCMB</p>
+                        <p class="edu-field">Studied Physics, Chemistry, Mathematics, and Biology while preparing for competitive examinations.</p>
+                    </div>
+                </div>
+
+                <div id="achievements" class="cert-col">
+                    <div class="section-header">
+                        <h2 class="section-title">Certifications</h2>
+                        <div class="section-line"></div>
+                    </div>
+                    <div class="cert-list">
+                        <a href="https://www.credly.com/badges/4539eaef-ddfb-46dd-92e1-7c8800e890a2/public_url" target="_blank" class="cert-item glass" style="text-decoration: none;">
+                            <i data-lucide="award"></i>
+                            <span>Microsoft Certified: Azure AI Fundamentals</span>
+                            <i data-lucide="external-link" style="margin-left: auto; width: 14px; height: 14px; opacity: 0.5;"></i>
+                        </a>
+                        <a href="https://unstop.com/certificate-preview/d1deb367-9f73-4156-be97-4a0a860055c3" target="_blank" class="cert-item glass" style="text-decoration: none;">
+                            <i data-lucide="award"></i>
+                            <span>Certificate of Participation in Cryptic Treasure Hunt</span>
+                            <i data-lucide="external-link" style="margin-left: auto; width: 14px; height: 14px; opacity: 0.5;"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/learning/certificates/8cd54c1817159bec593176da7f2c10d685e274638727489ebc9a0e26ea7d2340" target="_blank" class="cert-item glass" style="text-decoration: none;">
+                            <i data-lucide="award"></i>
+                            <span>IT Security Foundations: Operating System Security</span>
+                            <i data-lucide="external-link" style="margin-left: auto; width: 14px; height: 14px; opacity: 0.5;"></i>
+                        </a>
+                        <a href="https://www.kaggle.com/certification/badges/sagnikbiswas1/105" target="_blank" class="cert-item glass" style="text-decoration: none;">
+                            <i data-lucide="award"></i>
+                            <span>5-Day AI Agents Intensive Course with Google</span>
+                            <i data-lucide="external-link" style="margin-left: auto; width: 14px; height: 14px; opacity: 0.5;"></i>
+                        </a>
+                        <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=E777FCC52FE1E8A46200F68D081CE69BBB08EC14E6B54C0A76CDA68435899822" target="_blank" class="cert-item glass" style="text-decoration: none;">
+                            <i data-lucide="award"></i>
+                            <span>Oracle AI Vector Search Certified Professional</span>
+                            <i data-lucide="external-link" style="margin-left: auto; width: 14px; height: 14px; opacity: 0.5;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer reveal">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-name">Sagnik Biswas</div>
+                    <p class="footer-loc">New Delhi, Delhi, India</p>
+                </div>
+                
+                <div class="footer-social-container">
+                    <p class="footer-resume-text" style="color: var(--text-muted); font-size: 0.875rem; margin-bottom: 1rem; text-align: right;">For detailed resume, feel free to contact me.</p>
+                    <div class="footer-socials" style="justify-content: flex-end;">
+                        <a href="mailto:sagnikb000@gmail.com" class="social-btn glass"><i data-lucide="mail"></i></a>
+                        <a href="https://www.linkedin.com/in/sagnik--biswas" target="_blank" class="social-btn glass"><i data-lucide="linkedin"></i></a>
+                        <a href="https://github.com/sagnik-dev" target="_blank" class="social-btn glass"><i data-lucide="github"></i></a>
+                        <a href="https://www.instagram.com/sagnik_biswass/" target="_blank" class="social-btn glass"><i data-lucide="instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Sagnik Biswas • AI Specialist
+            </div>
+        </footer>
+    </main>
+
+    <!-- Custom Cursor / Glow Effect -->
+    <div class="global-glow"></div>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
